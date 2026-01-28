@@ -120,4 +120,82 @@
 	int anArray[];
 	```
 2. Allocation
-	
+	- We have to allocate memory for the array.
+	```java
+	anArray = new int[10]; // allocates memory for 10 integers
+	```
+3. Initialization
+	- Here we assign values
+	```java
+	anArray[0] = 100;
+	```
+
+> [!note]
+```java
+int[] anArray = {100, 200, 300, 400};
+// Here all (Declaration + Allocation + Initialization) is done in a statement
+```
+
+### Getting the size of the array
+- adding the build-in property `.length` to an array will return the length of the array.
+
+### Multi-Dimensional Arrays
+- Syntax : `String[][] names;`
+```java
+String[][] names = {
+	{"Mr., "Mrs.", "Ms."},
+	{"Smith", "Jones"}
+};
+```
+
+---
+## Using `var` type identifier
+- It enables the compiler to itself decide which datatype the given value would be.
+- It is a reserved type name that tells the compiler : *"Look at the value on the right side of the equals sign, determine its type, and apply that type to this variable."*
+- **Restrictions** : 
+	1. **No Fields** - Cannot be used for fields / Instances variables. Because the Scope is broad. `var` is only for **local variables**
+	2. **No Parameters** - Cannot be used for method arguments
+	3. **Must Initialize** - Because the compiler have to determines its datatype based on the value.
+	4. **No nulls** - We know that the datatype is determined using the assigned value. As `null`'s type can't be determined, We have to declare its type.
+---
+## Using Operators
+
+Operators are tools that manipulate your data(variables).
+
+### Operator Precedence
+- Highest : `++`, `--`, and `()`
+- Middle : `*`, `/`, `%`
+- Low : `+`, `-`
+- Lowest : `=`
+
+Types are same as other programming languages except:
+
+### Special Operators
+1. `instanceof`
+	 - Check if an object is a specific type (class or interace)
+	 - `obj instanceof String` returns `true` if `obj` is a String
+
+
+---
+## Expressions, Statements, and Blocks
+
+- An expression is any combination of variables, operators, and method calls that evaluates to a **single value**.
+
+```java
+float a = 0.0f;
+for(int i = 0 ; i < 10 ; i++)
+	a += 0.1f;
+System.out.println(a);
+```
+
+- Floating-point numbers (`float` and `double`) are **not precise**. They are binary approximations of decimals.
+- I thought the answer for the above snippet as `1.0` but the actual answer wasn't that it was somewhat `0.9999999999999`
+- A statement is a complete unit of execution. It is roughly equivalent to a sentence in English and must be terminated with a **semicolon (`;`)**.
+- A block is a group of zero or more statements enclosed in **braces `{ }`**. Java allows you to use a block anywhere a single statement is allowed.
+
+In short, Expressions are phrases, Statements are sentences and Blocks are paragraphs.
+
+---
+## Control Flow
+
+	 Complete yield and other topics.
