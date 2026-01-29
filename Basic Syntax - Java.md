@@ -197,5 +197,42 @@ In short, Expressions are phrases, Statements are sentences and Blocks are parag
 
 ---
 ## Control Flow
+It is same as Other programming languages, Here I have noticed two things which grab my attention.
+1. `yield` 
+	- This keyword is used in a block of code in `swtich` statement to return a value
+	- It is termed as `mini-return` 
+2. `->` 
+	- The core idea of the arrow is "Take this.... and do that"
+	- In `switch` it used to avoid avoid break, as it only executes one line.
+	- In `Lambda` it says : Take these parameters and **GO TO** this code body.
+3. `switch` 
+	- It supports Strings too (as same as String.equals()) but not double or long
+	- If a null value is given the switch will raise an NullPointerException immediately.
+### Summary Code Snippet:
+```java
+public class SwitchExpressionDemo {
+    public static void main(String[] args) {
+        String day = "MONDAY";
+        
+        // OLD WAY (Verbose, risky)
+        int resultOld;
+        switch (day) {
+            case "MONDAY": 
+                resultOld = 1; 
+                break;
+            default: 
+                resultOld = 0;
+        }
 
-	 Complete yield and other topics.
+        // NEW WAY (Concise, safe)
+        int resultNew = switch (day) {
+            case "MONDAY", "TUESDAY" -> 1; // Multiple labels
+            default -> {
+                System.out.println("Unknown day");
+                yield 0; // Yielding from a block
+            }
+        };
+    }
+}
+```
+---
