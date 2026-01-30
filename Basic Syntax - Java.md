@@ -1,4 +1,4 @@
-## Creating Variable and Naming them
+d## Creating Variable and Naming them
 - In java Field and Variable are often interchangeable
 ### Variables - Types
 1. Instance Variables (or) Non-static Fields
@@ -236,3 +236,5 @@ public class SwitchExpressionDemo {
 }
 ```
 ---
+
+Next to start with [[Life Cycle of a Java Program]]
